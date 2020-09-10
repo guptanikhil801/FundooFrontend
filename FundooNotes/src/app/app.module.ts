@@ -33,7 +33,6 @@ import { MoreiconComponent } from './components/icons/moreicon/moreicon.componen
 import { NoteService } from 'src/app/services/note.service';
 import {MatMenuModule} from '@angular/material/menu';
 import { DisplayNoteComponent } from './components/display-note/display-note.component';
-import { NotesComponentComponent } from './components/notes-component/notes-component.component';
 import { NotesComponent } from './components/notes/notes.component';
 @NgModule({
   declarations: [
@@ -52,7 +51,6 @@ import { NotesComponent } from './components/notes/notes.component';
     ArchiveiconComponent,
     MoreiconComponent,
     DisplayNoteComponent,
-    NotesComponentComponent,
     NotesComponent
   ],
   imports: [
