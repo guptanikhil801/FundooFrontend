@@ -34,6 +34,7 @@ import { NoteService } from 'src/app/services/note.service';
 import {MatMenuModule} from '@angular/material/menu';
 import { DisplayNoteComponent } from './components/display-note/display-note.component';
 import { NotesComponent } from './components/notes/notes.component';
+import { ErrorpageComponent } from './components/errorpage/errorpage.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +52,8 @@ import { NotesComponent } from './components/notes/notes.component';
     ArchiveiconComponent,
     MoreiconComponent,
     DisplayNoteComponent,
-    NotesComponent
+    NotesComponent,
+    ErrorpageComponent
   ],
   imports: [
     BrowserModule,
