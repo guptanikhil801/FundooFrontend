@@ -6,14 +6,14 @@
     </div>
     <div *ngIf="isShow" class="titledesiconcontainer">
         <form [formGroup]="note" (ngSubmit)="onSubmit()">
-            <mat-card class="example-card">
+            <mat-card [style.background]=notecolor class="example-card">
                 <div class="dispflex">
-                    <input matInput type="text" formControlName="title" placeholder="Title">
-                    <button type="button" matTooltip="Pin/Unpin" mat-button>
+                    <input [style.background]=notecolor matInput type="text" formControlName="title" placeholder="Title">
+                    <button [style.background]=notecolor type="button" matTooltip="Pin/Unpin" mat-button>
                         <img src="https://i.stack.imgur.com/d1JEp.png" alt="" height="30" width="30">
                     </button>
                 </div>
-                <input matInput type="text" formControlName="description" placeholder="Description">
+                <input matInput [style.background]=notecolor type="text" formControlName="description" placeholder="Description">
                 <div class="dispflex">
                     <app-reminder-icon></app-reminder-icon>
                     <app-collaborator-icon></app-collaborator-icon>

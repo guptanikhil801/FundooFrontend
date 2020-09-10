@@ -1,5 +1,5 @@
 <div class="container">
-    <mat-card *ngFor="let notedata of listOfNotes;" class="note-card">
+    <mat-card *ngFor="let notedata of listOfNotes;" [style.background]=notedata.color class="note-card">
         <p>{{notedata.title}}</p>
         <p>{{notedata.description}}</p>
         <div class="icon-menudiv">
