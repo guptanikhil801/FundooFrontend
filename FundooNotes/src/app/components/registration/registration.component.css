@@ -1,0 +1,60 @@
+.maindiv{
+    margin-top: 5%;
+    margin-right: 25%;
+    margin-left: 25%;
+}
+.btndiv{
+    float: center;
+}
+.namediv{
+    display: flex;
+    flex-direction: row;
+}
+.namedivfields{
+    width: 145%;
+    
+}
+.bottommargininfields{
+    margin-bottom: -8.5%;
+}
+.namedivmargin{
+    margin-left: 48%;
+}
+.fontst{
+    font-size: 18px;
+}
+.mt{
+    margin-top: 15%;
+    margin-left: 468%;
+}
+.dispin{
+    display: inline;
+}
+
+@media screen and (max-width: 600px){
+    .maindiv{
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 10%;
+        text-align: center;
+        width: 90%;
+    }
+    .namediv{
+        display: flex;
+        flex-direction: column;
+    }
+    .namedivfields{
+        width: 100%;
+
+    }
+    .namedivmargin{
+        margin-left: 0%
+    }
+    .mt{
+        margin-top: -80%;
+        margin-left: 50%;
+    }
+    .mbf{
+        margin-bottom: -10%;
+    }
+}

@@ -1,0 +1,6 @@
+.note-card{
+    min-width: 240px;
+    min-height: 120px;
+    max-width: fit-content;
+    max-height: fit-content;
+}

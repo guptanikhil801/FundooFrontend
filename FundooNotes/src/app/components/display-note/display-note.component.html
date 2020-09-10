@@ -1,0 +1,16 @@
+<mat-card class="note-card">
+    <h3>title</h3>
+    <p>description</p>
+    <div>
+        <app-reminder-icon ></app-reminder-icon>
+        <app-collaborator-icon ></app-collaborator-icon>
+        <app-color-palette-icon ></app-color-palette-icon>
+        <app-add-image-icon ></app-add-image-icon>
+        <app-archiveicon ></app-archiveicon>
+        <app-moreicon [matMenuTriggerFor]="moremenu" ></app-moreicon>
+        <mat-menu #moremenu="matMenu">
+            <button mat-menu-item>Delete Note</button>
+            <button mat-menu-item>Add Label</button>
+          </mat-menu>
+    </div>
+</mat-card>

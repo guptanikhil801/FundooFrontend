@@ -1,0 +1,77 @@
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+  <mat-toolbar color="white" class="example-toolbar">
+    <button mat-icon-button (click)="snav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <img src="https://i2.wp.com/ausdroid.net/wp-content/uploads/2014/11/google-keep-icon.png?w=399&ssl=1" alt="logo"
+      height="40" width="40">
+    <h1 class="example-app-name">FundooNotes</h1>
+    <div class="search-bar">
+      <mat-card>
+        <span class="material-icons" style="font-size: 24px;"> search </span>
+        <input matInput style="font-size: 18px;" class="searchinput" matTooltip="Search" type="text"
+          placeholder="Search">
+      </mat-card>
+    </div>
+    <button mat-button><span style="font-size: 32px;" class="material-icons">view_agenda</span></button>
+    <button mat-button [matMenuTriggerFor]="usermenu"> <img
+        src="https://www.pngitem.com/pimgs/m/516-5167304_transparent-background-white-user-icon-png-png-download.png"
+        height="37" width="42" alt=""></button>
+    <mat-menu #usermenu="matMenu">
+      <img style="margin-left: 35%;" class="br50"
+        src="https://images.unsplash.com/photo-1500622944204-b135684e99fd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+        alt="" height="60" width="60">
+      <p class="username">guptanikhil801@gmail.com</p>
+      <button class="sobtn" mat-button>Sign out</button>
+    </mat-menu>
+  </mat-toolbar>
+
+
+  <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+    <mat-sidenav class="wid20" #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+      [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+
+      <mat-nav-list class="sidenavitem">
+        <a mat-list-item routerLink="">
+          <svg style="margin-top: 15px;" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+            <path
+              d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6C7.8 12.16 7 10.63 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z" />
+          </svg>
+          Notes</a>
+        <a mat-list-item routerLink="">
+          <svg style="margin-top: 15px;" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+            <path
+              d="M10.01 21.01c0 1.1.89 1.99 1.99 1.99s1.99-.89 1.99-1.99h-3.98zm8.87-4.19V11c0-3.25-2.25-5.97-5.29-6.69v-.72C13.59 2.71 12.88 2 12 2s-1.59.71-1.59 1.59v.72C7.37 5.03 5.12 7.75 5.12 11v5.82L3 18.94V20h18v-1.06l-2.12-2.12zM16 13.01h-3v3h-2v-3H8V11h3V8h2v3h3v2.01z" />
+          </svg>
+          <p>Reminders</p>
+        </a>
+        <a mat-list-item routerLink="">
+          <svg style="margin-top: 15px;" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+            <path
+              d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z" />
+          </svg>
+          Edit Labels </a>
+        <a mat-list-item routerLink="">
+          <svg style="margin-top: 15px;" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+            <path
+              d="M20.54 5.23l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6.02 3 6.5V19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6.5c0-.48-.17-.93-.46-1.27zM12 17.5L6.5 12H10v-2h4v2h3.5L12 17.5zM5.12 5l.81-1h12l.94 1H5.12z" />
+          </svg>
+          Archive</a>
+        <a mat-list-item routerLink="">
+          <svg style="margin-top: 15px;" width="48" height="48" viewBox="0 0 48 48">
+            <path d="M15 4V3H9v1H4v2h1v13c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V6h1V4h-5zm2 15H7V6h10v13z"></path>
+            <path d="M9 8h2v9H9zm4 0h2v9h-2z"></path>
+          </svg>
+          Bin</a>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <div class="mlcn">
+        <app-createnote></app-createnote>
+      </div>
+
+    </mat-sidenav-content>
+
+  </mat-sidenav-container>
+</div>
