@@ -1,9 +1,13 @@
 .container{
-    padding: 20px;
-    margin-left: 10%;
+  /*   margin-left: 10%; */
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5% 10%;
+    align-items: flex-start;
+    width: 80%;
 }
 .note-card{
-    min-width: 220px;
+    min-width: 200px;
     min-height: 90px;
     max-width: fit-content;
     max-height: fit-content;
@@ -11,6 +15,10 @@
     padding-right: 16px;
     padding-top: 16px;
     padding-bottom: 4px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 7px;
+
 }
 
 p{
@@ -20,4 +28,6 @@ p{
     letter-spacing: 0;
     line-height: 1.5rem;
 }
-
+.icon-menudiv{
+    
+}
