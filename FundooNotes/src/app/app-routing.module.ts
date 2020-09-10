@@ -6,14 +6,14 @@ import { ForgotPasswordComponent } from 'src/app/components/forgot-password/forg
 import { ResetPasswordComponent } from 'src/app/components/reset-password/reset-password.component';
 import { DashboardComponent } from 'src/app/components/dashboard/dashboard.component';
 import { NotesComponent } from 'src/app/components/notes/notes.component';
-import { DisplayNoteComponent } from 'src/app/components/display-note/display-note.component';
-import { CreatenoteComponent } from 'src/app/components/createnote/createnote.component';
+import { ErrorpageComponent } from 'src/app/components/errorpage/errorpage.component'
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'registration', component: RegistrationComponent },
   { path: 'resetPassword', component: ResetPasswordComponent },
   { path: 'forgotPassword', component: ForgotPasswordComponent },
+  {path: '**', component: ErrorpageComponent},
   {
     path: 'dashboard', component: DashboardComponent,
     children:
