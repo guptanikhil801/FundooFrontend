@@ -22,6 +22,14 @@ export class DashboardComponent implements OnDestroy {
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }
+
+  signoutfun(){
+    localStorage.removeItem('token'); 
+    localStorage.removeItem('email');
+    localStorage.removeItem('name' );
+    localStorage.removeItem('profilePic');
+    this.router.navigate(['/login']);
+  }
   ngOnInit() {
   }
 
