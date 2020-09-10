@@ -32,3 +32,6 @@
   display: flex;flex-direction: row; 
   justify-content: space-around; 
 }
+.dispflex input{
+  margin-left: 2%;
+}

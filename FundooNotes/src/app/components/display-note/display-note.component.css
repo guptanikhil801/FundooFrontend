@@ -1,5 +1,4 @@
 .container{
-  /*   margin-left: 10%; */
     display: flex;
     flex-wrap: wrap;
     margin: 5% 10%;
@@ -17,8 +16,13 @@
     padding-bottom: 4px;
     margin-right: 20px;
     margin-bottom: 20px;
-    border-radius: 7px;
-
+    border-radius: 8px;
+}
+.note-card:hover{
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+.note-card:hover .icon-menudiv {
+    visibility: visible;
 }
 
 p{
@@ -29,5 +33,6 @@ p{
     line-height: 1.5rem;
 }
 .icon-menudiv{
-    
+  visibility: hidden;  
 }
+
