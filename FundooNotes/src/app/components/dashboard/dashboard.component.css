@@ -39,9 +39,9 @@
       width: 20%;
   }
 .search-bar {
-  margin-left: 10%;
-width: 50%;
-margin-right: 5%;
+  margin-left: 5%;
+  width: 57%;
+  margin-right: 5%;
 }
 
 .searchinput{
@@ -60,4 +60,7 @@ mat-card{padding: 4px;}
 }
 .sobtn, .username{
   border: 1px solid #dadce0;
+}
+.scdiv{
+  background-color: white;
 }

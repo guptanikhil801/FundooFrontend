@@ -1,17 +1,20 @@
 <div class="maincontainer">
     <div *ngIf="!ishidden">
         <mat-card class="example-card">
-            <input matInput type="text" (click)="toggleDisplay()" placeholder="Take a note">
+            <input matInput type="text" (click)="toggleDisplay()" placeholder="Take a note...">
         </mat-card>
     </div>
     <div *ngIf="isShow" class="titledesiconcontainer">
         <form [formGroup]="note" (ngSubmit)="onSubmit()">
             <mat-card class="example-card">
-                <input matInput type="text" formControlName="title" placeholder="Title">
-                <button type="button" matTooltip="Pin/Unpin" mat-button>
-                    <img src="https://i.stack.imgur.com/d1JEp.png" alt="" height="30" width="30">
-                </button>
-                <input matInput style="margin-left: -10%;" type="text" formControlName="description" placeholder="Description">
+                <div class="dispflex">
+                    <input style="margin-left: 2%;" matInput type="text" formControlName="title" placeholder="Title">
+                    <button type="button" matTooltip="Pin/Unpin" mat-button>
+                        <img src="https://i.stack.imgur.com/d1JEp.png" alt="" height="30" width="30">
+                    </button>
+                </div>
+
+                <input matInput type="text" formControlName="description" placeholder="Description">
                 <div class="dispflex">
                     <app-reminder-icon></app-reminder-icon>
                     <app-collaborator-icon></app-collaborator-icon>
@@ -22,9 +25,9 @@
                     <mat-menu #moremenu="matMenu">
                         <button mat-menu-item>Add Label</button>
                     </mat-menu>
-                    <button mat-button >Close</button>
+                    <button mat-button>Close</button>
                 </div>
-                
+
             </mat-card>
         </form>
     </div>
