@@ -18,7 +18,7 @@
                 <div class="dispflex">
                     <app-reminder-icon></app-reminder-icon>
                     <app-collaborator-icon></app-collaborator-icon>
-                    <app-color-palette-icon></app-color-palette-icon>
+                    <app-color-palette-icon [matMenuTriggerFor]="colorMenu"></app-color-palette-icon>
                     <app-add-image-icon></app-add-image-icon>
                     <app-archiveicon></app-archiveicon>
                     <app-moreicon [matMenuTriggerFor]="moremenu"></app-moreicon>
@@ -32,3 +32,30 @@
         </form>
     </div>
 </div>
+<mat-menu #colorMenu="matMenu" yPosition="above">
+    <div class="icondiv">
+        <input class="iconstyle whiteicon" type="button" mat-menu-item title="white" />
+        <input class="iconstyle" type="image" mat-menu-item title="red"
+            src="https://res.cloudinary.com/nikhilcloud007/image/upload/v1599752301/redcoloricon_kcg5mv.png" />
+        <input class="iconstyle" type="image" mat-menu-item title="orange"
+            src="https://res.cloudinary.com/nikhilcloud007/image/upload/v1599752301/orangecoloricon_fufor3.png" />
+        <input class="iconstyle" type="image" mat-menu-item title="yellow"
+            src="https://res.cloudinary.com/nikhilcloud007/image/upload/v1599752301/yellowcoloricon_quta5p.png" />
+        <input class="iconstyle" type="image" mat-menu-item title="green"
+            src="https://res.cloudinary.com/nikhilcloud007/image/upload/v1599752241/greencoloricon_aepokp.png" />
+        <input class="iconstyle" type="image" mat-menu-item title="teal"
+            src="https://res.cloudinary.com/nikhilcloud007/image/upload/v1599752301/tealcoloricon_ptlak8.png" />
+        <input class="iconstyle" class="iconstyle" type="image" mat-menu-item title="blue"
+            src="https://res.cloudinary.com/nikhilcloud007/image/upload/v1599750724/bluecoloricon_swr2ov.png" />
+        <input class="iconstyle" type="image" mat-menu-item title="darkblue"
+            src="https://res.cloudinary.com/nikhilcloud007/image/upload/v1599751259/darkbluecoloricon_pvfsm8.png" />
+        <input class="iconstyle" type="image" mat-menu-item title="purple" alt="purple"
+            src="https://res.cloudinary.com/nikhilcloud007/image/upload/v1599752301/purplecoloricon_bd0xsl.png" />
+        <input class="iconstyle" type="image" mat-menu-item title="pink" alt="pink"
+            src="https://res.cloudinary.com/nikhilcloud007/image/upload/v1599752301/pinkcoloricon_rho6yl.png" />
+        <input class="iconstyle" type="image" mat-menu-item title="brown"
+            src="https://res.cloudinary.com/nikhilcloud007/image/upload/v1599751173/browncoloricon_rammd7.png" />
+        <input class="iconstyle" type="image" mat-menu-item title="grey" alt="grey"
+            src="https://res.cloudinary.com/nikhilcloud007/image/upload/v1599752301/greycoloricon_a1p5lk.png" />
+    </div>
+</mat-menu>

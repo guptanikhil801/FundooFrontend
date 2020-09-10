@@ -35,3 +35,19 @@
 .dispflex input{
   margin-left: 2%;
 }
+.iconstyle{
+  width: 20px; height: 20px; 
+  border-radius: 50%; padding: 2px;
+}
+.icondiv{
+  display: grid;
+  grid-gap: 3px 3px;
+  grid-template-columns: auto auto auto auto;
+  padding: 2px;
+}
+.whiteicon{
+  border: solid 0.8px black;
+  margin-left: 2px;
+  margin-top: 2px;
+}
+
