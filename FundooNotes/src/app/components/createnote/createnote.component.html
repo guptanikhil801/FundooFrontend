@@ -11,8 +11,8 @@
                 <button type="button" matTooltip="Pin/Unpin" mat-button>
                     <img src="https://i.stack.imgur.com/d1JEp.png" alt="" height="30" width="30">
                 </button>
-                <input matInput style="width: 95%;" type="text" formControlName="description" placeholder="Description">
-                <div style="float: left; margin-right: 23%;">
+                <input matInput style="margin-left: -10%;" type="text" formControlName="description" placeholder="Description">
+                <div class="dispflex">
                     <app-reminder-icon></app-reminder-icon>
                     <app-collaborator-icon></app-collaborator-icon>
                     <app-color-palette-icon></app-color-palette-icon>
@@ -22,8 +22,9 @@
                     <mat-menu #moremenu="matMenu">
                         <button mat-menu-item>Add Label</button>
                     </mat-menu>
+                    <button mat-button >Close</button>
                 </div>
-                <span><button mat-button >Close</button></span>
+                
             </mat-card>
         </form>
     </div>

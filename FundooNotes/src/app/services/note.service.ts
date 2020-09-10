@@ -13,8 +13,13 @@ export class NoteService {
     headers: new HttpHeaders()
       .set('Authorization',  `${localStorage.token}`)
   }
+
   createnoteapi(data:object){
     return this.http.post(environment.baseUrl+"api/notes/addNotes",data,this.header);
+  }
+
+  getallnotesapi(){
+    return this.http.get(environment.baseUrl+"api/notes/getNotesList", this.header)
   }
 
 }

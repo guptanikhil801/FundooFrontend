@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material';
+import { MatInputModule, MatGridListModule } from '@angular/material';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
@@ -34,6 +34,7 @@ import { NoteService } from 'src/app/services/note.service';
 import {MatMenuModule} from '@angular/material/menu';
 import { DisplayNoteComponent } from './components/display-note/display-note.component';
 import { NotesComponentComponent } from './components/notes-component/notes-component.component';
+import { NotesComponent } from './components/notes/notes.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +52,8 @@ import { NotesComponentComponent } from './components/notes-component/notes-comp
     ArchiveiconComponent,
     MoreiconComponent,
     DisplayNoteComponent,
-    NotesComponentComponent
+    NotesComponentComponent,
+    NotesComponent
   ],
   imports: [
     BrowserModule,
@@ -69,7 +71,8 @@ import { NotesComponentComponent } from './components/notes-component/notes-comp
     MatSidenavModule,
     MatTooltipModule,
     MatSnackBarModule,
-    MatMenuModule
+    MatMenuModule,
+    MatGridListModule
   ],
   providers: [HttpService, UserService,NoteService],
   bootstrap: [AppComponent]

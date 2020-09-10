@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { NoteService } from '../../services/note.service';
-import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
-import { title } from 'process';
+import {  FormGroup,  FormControl } from '@angular/forms';
+
 @Component({
   selector: 'app-createnote',
   templateUrl: './createnote.component.html',
@@ -21,7 +21,6 @@ export class CreatenoteComponent implements OnInit {
   }
 
   note: FormGroup;
-
   constructor(private service: NoteService
     ) { }
 

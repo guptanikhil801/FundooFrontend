@@ -1,1 +1,4 @@
 .material-icons.md-18 { font-size: 18px; }
+button{
+    min-width: 22px; padding: 0px 5px;
+}
