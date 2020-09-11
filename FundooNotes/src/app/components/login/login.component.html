@@ -1,34 +1,37 @@
 <div class="maindiv">
     <form [formGroup]="user" (ngSubmit)="validation()">
-    <mat-card style="padding: 12% 5%;">
-        <div style="text-align:center">
-            <img src="assets/fundoologo.png" height="80" width="156">
-            <mat-card-title style=" margin-top: 1%;"> Sign In </mat-card-title>
-        </div>
-        <div class="bottommargininfields">
-            <p>
-                <mat-form-field style="width: 100%;" appearance="outline">
-                    <mat-label>Email</mat-label>
-                    <input formControlName="email" matInput type="email">
-                </mat-form-field>
-            </p>
-        </div>
-        <div class="bottommargininfields">
-            <p>
-                <mat-form-field style="width: 100%;" appearance="outline">
-                    <mat-label>Password</mat-label>
-                    <input formControlName="password" matInput type="password">
-                </mat-form-field>
-            </p>
-        </div>
-        <div class="namediv" style="margin-top: -8%;">
-            <mat-nav-list>
-                <a mat-list-item  routerLink="/registration" style="color: cornflowerblue; margin-left: -10%;" href="#">Create Account </a>
-            </mat-nav-list>
-            <div>
-                <button style="margin-top: 14%; " mat-raised-button color="primary">Sign in</button>
+        <mat-card class="pad">
+            <div style="text-align:center">
+                <img src="assets/fundoologo.png" height="80" width="156">
+                <mat-card-title style=" margin-top: 1%;"> Sign In </mat-card-title>
             </div>
-        </div>
-    </mat-card>
-</form>
+            <div class="bottommargininfields">
+                <p>
+                    <mat-form-field style="width: 100%;" appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input formControlName="email" matInput type="email">
+                    </mat-form-field>
+                </p>
+            </div>
+            <div class="bottommargininfields">
+                <p>
+                    <mat-form-field style="width: 100%;" appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input formControlName="password" matInput type="password">
+                    </mat-form-field>
+                </p>
+            </div>
+            <div class="namediv">
+                <mat-nav-list>
+                    <a mat-list-item routerLink="/registration" class="ca" href="#">Create Account </a>
+                </mat-nav-list>
+                <div>
+                    <button style="margin-top: 14%; " mat-raised-button color="primary">Sign in</button>
+                </div>
+            </div>
+            <mat-nav-list class="fp">
+                <a mat-list-item routerLink="/forgotPassword" class="cfb" href="#">forgot Password ?</a>
+            </mat-nav-list>
+        </mat-card>
+    </form>
 </div>

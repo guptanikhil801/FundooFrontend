@@ -10,7 +10,23 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-top: -8%
 }
 .bottommargininfields{
     margin-bottom: -2%;
+}
+.pad{
+    padding: 12% 5%;
+}
+.ca{
+    color: cornflowerblue;
+    margin-left: -10%;
+}
+.fp{
+    width: fit-content;
+    margin-left: -3.2%;
+    margin-top: -3%;
+}
+.cfb{
+    color: cornflowerblue;
 }
