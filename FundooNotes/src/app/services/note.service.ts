@@ -22,7 +22,7 @@ export class NoteService {
     return this.http.get(environment.baseUrl+"api/notes/getNotesList", this.header)
   }
 
-  archive(data:object){
+  archiveapi(data:object){
     return this.http.post(environment.baseUrl+"api/notes/archiveNotes", data, this.header )
   }
 

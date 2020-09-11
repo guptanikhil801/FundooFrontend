@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { NoteService } from 'src/app/services/note.service';
 
 @Component({
   selector: 'app-display-note',
@@ -7,7 +8,18 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class DisplayNoteComponent implements OnInit {
   @Input() listOfNotes: Object[];
-  constructor() { }
+
+  constructor(private service: NoteService
+  ) { }
+
+  archivefun(id: string) {
+    let data = {
+      isArchived: true,
+      noteIdList: [id]
+    }
+    this.service.archiveapi(data).subscribe();
+    console.log(data);
+  }
 
   ngOnInit() {
   }

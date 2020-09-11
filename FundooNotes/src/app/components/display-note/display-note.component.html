@@ -7,7 +7,7 @@
             <app-collaborator-icon></app-collaborator-icon>
             <app-color-palette-icon></app-color-palette-icon>
             <app-add-image-icon></app-add-image-icon>
-            <app-archiveicon></app-archiveicon>
+            <app-archiveicon (click)="archivefun(notedata.id)"></app-archiveicon>
             <app-moreicon [matMenuTriggerFor]="moremenu"></app-moreicon>
             <mat-menu #moremenu="matMenu">
                 <button mat-menu-item>Delete Note</button>
