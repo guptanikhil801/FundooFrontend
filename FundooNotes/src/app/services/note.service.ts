@@ -30,4 +30,7 @@ export class NoteService {
     return this.http.post(environment.baseUrl+"api/notes/trashNotes", data, this.header )
   }
 
+  colorchangeapi(data:object){
+    return this.http.post(environment.baseUrl+"api/notes/changesColorNotes", data, this.header )
+  }
 }
