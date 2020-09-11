@@ -5,7 +5,7 @@
         <div class="icon-menudiv">
             <app-reminder-icon></app-reminder-icon>
             <app-collaborator-icon></app-collaborator-icon>
-            <app-color-palette-icon></app-color-palette-icon>
+            <app-color-palette-icon [matMenuTriggerFor]="colorMenu"></app-color-palette-icon>
             <app-add-image-icon></app-add-image-icon>
             <app-archiveicon (click)="archivefun(notedata.id)"></app-archiveicon>
             <app-moreicon [matMenuTriggerFor]="moremenu"></app-moreicon>
@@ -16,3 +16,31 @@
         </div>
     </mat-card>
 </div>
+<mat-menu #colorMenu="matMenu" yPosition="above">
+    <div class="icondiv">
+        <input class="iconstyle whiteicon" (click)="changecolor('#FFFFFF')" type="button" mat-menu-item matTooltip="white" />
+        <input class="iconstyle" (click)="changecolor('#f28b82')" type="image" mat-menu-item matTooltip="red"
+            src="https://res.cloudinary.com/nikhilcloud007/image/upload/v1599752301/redcoloricon_kcg5mv.png" />
+        <input class="iconstyle" (click)="changecolor('#fbbc04')" type="image" mat-menu-item matTooltip="orange"
+            src="https://res.cloudinary.com/nikhilcloud007/image/upload/v1599752301/orangecoloricon_fufor3.png" />
+        <input class="iconstyle" (click)="changecolor('#fff475')" type="image" mat-menu-item matTooltip="yellow"
+            src="https://res.cloudinary.com/nikhilcloud007/image/upload/v1599752301/yellowcoloricon_quta5p.png" />
+        <input class="iconstyle" (click)="changecolor('#ccff90')" type="image" mat-menu-item matTooltip="green"
+            src="https://res.cloudinary.com/nikhilcloud007/image/upload/v1599752241/greencoloricon_aepokp.png" />
+        <input class="iconstyle" (click)="changecolor('#a7ffeb')" type="image" mat-menu-item matTooltip="teal"
+            src="https://res.cloudinary.com/nikhilcloud007/image/upload/v1599752301/tealcoloricon_ptlak8.png" />
+        <input class="iconstyle" (click)="changecolor('#cbf0f8')" type="image" mat-menu-item
+            matTooltip="blue"
+            src="https://res.cloudinary.com/nikhilcloud007/image/upload/v1599750724/bluecoloricon_swr2ov.png" />
+        <input class="iconstyle" (click)="changecolor('#aecbfa')" type="image" mat-menu-item matTooltip="darkblue"
+            src="https://res.cloudinary.com/nikhilcloud007/image/upload/v1599751259/darkbluecoloricon_pvfsm8.png" />
+        <input class="iconstyle" (click)="changecolor('#d7aefb')" type="image" mat-menu-item matTooltip="purple" alt="purple"
+            src="https://res.cloudinary.com/nikhilcloud007/image/upload/v1599752301/purplecoloricon_bd0xsl.png" />
+        <input class="iconstyle" (click)="changecolor('#fdcfe8')" type="image" mat-menu-item matTooltip="pink" alt="pink"
+            src="https://res.cloudinary.com/nikhilcloud007/image/upload/v1599752301/pinkcoloricon_rho6yl.png" />
+        <input class="iconstyle" (click)="changecolor('#e6c9a8')" type="image" mat-menu-item matTooltip="brown"
+            src="https://res.cloudinary.com/nikhilcloud007/image/upload/v1599751173/browncoloricon_rammd7.png" />
+        <input class="iconstyle" (click)="changecolor('#DCDCDC')" type="image" mat-menu-item matTooltip="grey" alt="grey"
+            src="https://res.cloudinary.com/nikhilcloud007/image/upload/v1599752301/greycoloricon_a1p5lk.png" />
+    </div>
+</mat-menu> 
