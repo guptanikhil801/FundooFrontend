@@ -10,7 +10,7 @@
             <app-archiveicon (click)="archivefun(notedata.id)"></app-archiveicon>
             <app-moreicon [matMenuTriggerFor]="moremenu"></app-moreicon>
             <mat-menu #moremenu="matMenu">
-                <button mat-menu-item>Delete Note</button>
+                <button mat-menu-item (click)="trashnotefun(notedata.id)">Delete Note</button>
                 <button mat-menu-item>Add Label</button>
             </mat-menu>
         </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { NoteService } from 'src/app/services/note.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-display-note',
@@ -9,7 +10,7 @@ import { NoteService } from 'src/app/services/note.service';
 export class DisplayNoteComponent implements OnInit {
   @Input() listOfNotes: Object[];
 
-  constructor(private service: NoteService
+  constructor(private service: NoteService, private snackBar: MatSnackBar
   ) { }
 
   archivefun(id: string) {
@@ -17,7 +18,18 @@ export class DisplayNoteComponent implements OnInit {
       isArchived: true,
       noteIdList: [id]
     }
-    this.service.archiveapi(data).subscribe();
+    this.service.archiveapi(data).subscribe(
+      response => {
+        this.snackBar.open("Successfull:", "Note Archived", {
+          duration: 2500
+        });
+      },
+      error => {
+        this.snackBar.open("Failed:", "something went wrong", {
+          duration: 2500
+        });
+      }
+    );
   }
 
   trashnotefun(id: string) {
