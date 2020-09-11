@@ -26,4 +26,8 @@ export class NoteService {
     return this.http.post(environment.baseUrl+"api/notes/archiveNotes", data, this.header )
   }
 
+  trashapi(data:object){
+    return this.http.post(environment.baseUrl+"api/notes/trashNotes", data, this.header )
+  }
+
 }
