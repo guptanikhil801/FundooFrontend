@@ -37,7 +37,18 @@ export class DisplayNoteComponent implements OnInit {
       isDeleted: true,
       noteIdList: [id]
     }
-    this.service.trashnoteapi(data).subscribe();
+    this.service.trashnoteapi(data).subscribe(
+      response => {
+        this.snackBar.open("Successfull:", "Note trashed", {
+          duration: 2500
+        });
+      },
+      error => {
+        this.snackBar.open("Failed:", "something went wrong", {
+          duration: 2500
+        });
+      }
+    );
     console.log(data);
   }
 
