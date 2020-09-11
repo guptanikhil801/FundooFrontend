@@ -37,7 +37,9 @@ export class DisplayNoteComponent implements OnInit {
       color: newcolor,
       noteIdList: [id]
     }
+    console.log(data);
     this.service.colorchangeapi(data).subscribe();
+    
   }
 
   trashnotefun(id: string) {
