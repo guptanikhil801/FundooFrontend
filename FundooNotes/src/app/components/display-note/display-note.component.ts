@@ -18,9 +18,18 @@ export class DisplayNoteComponent implements OnInit {
       noteIdList: [id]
     }
     this.service.archiveapi(data).subscribe();
+  }
+
+  trashnotefun(id: string) {
+    let data = {
+      isDeleted: true,
+      noteIdList: [id]
+    }
+    this.service.trashnoteapi(data).subscribe();
     console.log(data);
   }
 
+  //sDeleted
   ngOnInit() {
   }
 
