@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { NoteService } from 'src/app/services/note.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
@@ -9,6 +9,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class DisplayNoteComponent implements OnInit {
   @Input() listOfNotes: Object[];
+  @Output() data: EventEmitter<string> = new EventEmitter();
 
   constructor(private service: NoteService, private snackBar: MatSnackBar
   ) { }
@@ -37,9 +38,8 @@ export class DisplayNoteComponent implements OnInit {
       color: newcolor,
       noteIdList: [id]
     }
-    console.log(data);
     this.service.colorchangeapi(data).subscribe();
-    
+    this.data.emit('getallnote');
   }
 
   trashnotefun(id: string) {
@@ -62,7 +62,6 @@ export class DisplayNoteComponent implements OnInit {
     console.log(data);
   }
 
-  //sDeleted
   ngOnInit() {
   }
 

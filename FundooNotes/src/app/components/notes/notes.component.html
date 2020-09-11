@@ -1,2 +1,2 @@
 <app-createnote></app-createnote>
-<app-display-note [listOfNotes]="listOfNotes"></app-display-note>
+<app-display-note (data)="call_api($event)" [listOfNotes]="listOfNotes"></app-display-note>
