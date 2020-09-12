@@ -50,6 +50,7 @@
 mat-card{padding: 4px;}
 .br50{
   border-radius: 50%;
+  margin-left: 35%;
 }
 .username{
   border-radius: 100px;
@@ -63,4 +64,16 @@ mat-card{padding: 4px;}
 }
 .scdiv{
   background-color: white;
+}
+.fs24{
+  font-size: 24px;
+}
+.fs18{
+  font-size: 18px;
+}
+.fs32{
+  font-size: 32px;
+}
+.mt15{
+  margin-top: 15px;
 }

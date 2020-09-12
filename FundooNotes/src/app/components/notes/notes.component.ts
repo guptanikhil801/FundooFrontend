@@ -20,11 +20,13 @@ export class NotesComponent implements OnInit {
         }
       );
   }
+
   call_api(eventvalue) {
     this.apiCallGetAllNote();
     this.emitdata = eventvalue;
     console.log(this.emitdata);
   }
+  
   ngOnInit(): void {
     this.apiCallGetAllNote();
   }
